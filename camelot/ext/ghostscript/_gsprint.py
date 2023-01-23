@@ -248,7 +248,8 @@ if sys.platform == "win32":
     libgs = windll.LoadLibrary(libgs)
 else:
     try:
-        libgs = cdll.LoadLibrary("libgs.so")
+        # libgs = cdll.LoadLibrary("libgs.so")
+        libgs = cdll.LoadLibrary("/opt/homebrew/Cellar/ghostscript/10.0.0/lib/libgs.dylib.10.00")
     except OSError:
         # shared object file not found
         import ctypes.util
